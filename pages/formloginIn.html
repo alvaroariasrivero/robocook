@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/pestana.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html"><img src="../assets/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <div class="menu-nav">
+                    <ul class="pages">
+                        <li>
+                            <a href="../pages/tienda.html">Tienda</a>
+                        </li>
+                        <li>
+                            <a href="../pages/formcontact.html">Contacto</a>
+                        </li>
+                        <li>
+                            <a href="../pages/formlogin.html">Login</a>
+                        </li>
+                        <li>
+                            <a href="../pages/carrito.html"><img src="../assets/carrito.png" alt="carrito" class="carrito"></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+  <h1> Login de RoobCook </h1>
+    <div class="dform">
+        <form onsubmit="Comprobar()">
+
+            <label for="email2">Email</label><br>
+            <input type="email2" id="emailloginIn" name="email2" required ><br><br>
+            <label for="psw">Contraseña</label><br>
+            <input type="password" id="pswloguinIn"  ><br><br>
+            <input type="button" id="btloguinIn"> ENVIAR <br><br>
+        </form>
+    </div>
+    <div>
+        <a href="../pages/formlogin.html"> Crear nueva cuenta</a><br>
+    </div><br>
+    <footer>
+        <a href="../index.html"><img src="../assets/logo.png" alt="logo"></a>
+        <div class="datos">
+            <p><b>Contáctanos:</b></p>
+            <p class="contact">+34 666 666 666</p>
+            <p class="contact">robocook@robocook.es</p>
+        </div>
+        <div class="derecha">
+            <p><b>Síguenos en nuestras redes:</b></p>
+            <div class="redes">
+                <img src="../assets/instagram.png" alt="instagram" class="social">
+                <img src="../assets/facebook.png" alt="facebook" class="social">
+                <img src="../assets/twitter.png" alt="twitter" class="social">
+                <img src="../assets/youtube.png" alt="youtube" class="social">
+            </div>
+        </div>
+    </footer>
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/firebase.js" type="module"></script>
+</body>
+</html>
