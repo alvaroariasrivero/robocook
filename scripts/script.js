@@ -57,7 +57,7 @@ const showCar = () => {
             }
         }
     }else {
-        document.getElementById('car').innerHTML = "<h2>Tu carrito esta vacio</h2>"
+        document.getElementById('car').innerHTML = "<h2 class='monto'>Tu carrito esta vacio</h2>"
         document.getElementById('comprar').setAttribute('style','display: none')
     }
 }
@@ -101,9 +101,9 @@ const shopNow = () => {
         total += (car[x].price * car[x].count)
     }
     const template = `
-    <div>
-        <h2>Muchas Gracias por tu Compra :)</h2>
-        <p>El monto total de tu compra es ${total}</p>
+    <div class="monto">
+        <h2>Muchas gracias por tu compra :)</h2>
+        <p>El importe total de tu compra es de ${total}$</p>
     </div>`
     document.getElementById('car').innerHTML = template
     document.getElementById('comprar').setAttribute('style','display: none')

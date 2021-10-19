@@ -207,6 +207,20 @@ h5 {
     margin-top: 10px;
 }
 
+.compra {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.monto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 30px auto;
+    padding-left: 30px;
+}
+
 
 footer {
     color: var(--color-2);
