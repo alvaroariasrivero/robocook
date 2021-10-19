@@ -1,15 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tienda</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/pestana.png">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html"><img src="../assets/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <div class="menu-nav">
+                    <ul class="pages">
+                        <li>
+                            <a href="../pages/tienda.html">Tienda</a>
+                        </li>
+                        <li>
+                            <a href="../pages/formcontact.html">Contacto</a>
+                        </li>
+                        <li>
+                            <a href="../pages/formlogin.html">Login</a>
+                        </li>
+                        <li>
+                            <a href="../pages/carrito.html"><img src="../assets/carrito.png" alt="carrito" class="carrito"></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+  
+
+    <div class="intro">
+        <img src="../assets/imgtienda.jpg" alt="tienda" class="img-intro">
+        <div class="centrado">
+            <h1>Tienda</h1>
+            <p class="intro">Adquiere ya tu Robocook® y comienza a crear esas maravillosas recetas que tanto gustan</p>
+        </div>
+    </div>
+    <section id="shop">
+        <div id="producto_1" class="tienda">
+            <img src="../assets/thermo.jpg" alt="thermo" class="prd-img">
+            <h3>RoboCook® TM6™</h3>
+            <div class="producto">
+                <p>$1,499.00</p>
+                <input type="number" name="unidades" id="unidades" min="0">
+                <button id="button1">comprar</button>
+            </div>
+        </div>
+        <div id="producto_2" class="tienda">
+            <img src="../assets/libro.jpg" alt="libro" class="prd-img">
+            <h3>Disney and RoboCook® Cooking Throughout the Year</h3>
+            <div class="producto">
+                <p>$45.00</p>
+                <input type="number" name="unidades" id="unidades" min="0">
+                <button id="button2">comprar</button>
+            </div>
+        </div>
+        <div id="producto_3" class="tienda">
+            <img src="../assets/tetera.png" alt="tetera" class="prd-img">
+            <h3>DEGRENNE Salam Teapot</h3>
+            <div class="producto">
+                <p>$149.00</p>
+                <input type="number" name="unidades" id="unidades" min="0">
+                <button id="button3">comprar</button>
+            </div>
+        </div>
+        <div id="producto_4" class="tienda">
+            <img src="../assets/anna.png" alt="fuente-anna" class="prd-img">
+            <h3>Anna</h3>
+            <div class="producto">
+                <p>$65.00</p>
+                <input type="number" name="unidades" id="unidades" min="0">
+                <button id="button4">comprar</button>
+            </div>
+        </div>
+        <div id="producto_5" class="tienda">
+            <img src="../assets/betty.png" alt="fuente-betty" class="prd-img">
+            <h3>Betty</h3>
+            <div class="producto">
+                <p>$99.00</p>
+                <input type="number" name="unidades" id="unidades" min="0">
+                <button id="button5">comprar</button>
+            </div>
+        </div>
+        <div id="producto_6" class="tienda">
+            <img src="../assets/paul.jpg" alt="libro-paul" class="prd-img">
+            <h3>RockStars - Conoce a Paul</h3>
+            <div class="producto">
+                <p>$49.00</p>
+                <input type="number" name="unidades" id="unidades" min="0">
+                <button id="button6">comprar</button>
+            </div>
+        </div>
+    </section>
     
 
+    <footer>
+        <a href="../index.html"><img src="../assets/logo.png" alt="logo"></a>
+        <div class="datos">
+            <p><b>Contáctanos:</b></p>
+            <p class="contact">+34 666 666 666</p>
+            <p class="contact">robocook@robocook.es</p>
+        </div>
+        <div class="derecha">
+            <p><b>Síguenos en nuestras redes:</b></p>
+            <div class="redes">
+                <img src="../assets/instagram.png" alt="instagram" class="social">
+                <img src="../assets/facebook.png" alt="facebook" class="social">
+                <img src="../assets/twitter.png" alt="twitter" class="social">
+                <img src="../assets/youtube.png" alt="youtube" class="social">
+            </div>
+        </div>
+    </footer>
 
     <script src="../scripts/script.js"></script>
     <script src="../scripts/firebase.js" type="module"></script>

@@ -1,3 +1,8 @@
+* {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
 :root {
     --color-1: #D2FF5E;
     --color-2: #6FE02F;
@@ -5,4 +10,176 @@
     --color-4: #2BE060;
     --color-5: #79FFC7;
     --background: #ffffff;
+}
+
+header {
+    background-color: var(--color-1);
+}
+
+.container {
+    display: flex;
+    background-color: var(--color-1);
+}
+
+nav {
+    width: 100%;
+}
+
+.pages {
+    display: flex;
+    list-style: none;
+    margin-top: 60px;
+    align-items: center;
+}
+
+header nav div>ul>li>a {
+    font-size: 30px;
+    color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 80px;
+    text-decoration: none;
+}
+
+.carrito {
+    width: 75%;
+}
+
+.intro {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.img-intro {
+    width: 100%;
+    filter: brightness(50%);
+    margin: 0px;
+}
+
+.centrado {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 64px;
+    color: var(--color-4);
+}
+
+.intro {
+    font-size: 24px;
+    color: var(--color-1);
+}
+
+.frase {
+    font-size: 24px;
+    color: #444;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.articulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    margin-left: 20px;
+    text-align: justify;
+    margin-right: 20px;
+}
+
+.imagen {
+    width: 40%;
+    height: 40%;
+    border-radius: 5px;
+}
+
+h5 {
+    font-size: 24px;
+    color: #333;
+}
+
+.presentacion {
+    font-size: 16px;
+    color: #333;
+}
+
+.tienda {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: var(--color-1) solid ;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-self: stretch;
+    align-self: normal;
+}
+
+.prd-img {
+    width: 15%;
+}
+
+.carShop {
+    display: flex;
+    border: var(--color-1) solid;
+    border-radius: 5px;
+    width: 80%;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+footer {
+    color: var(--color-2);
+    background-color: #444;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+.redes {
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+
+.contact {
+    cursor: pointer;
+}
+
+.social {
+    cursor: pointer;
 }
