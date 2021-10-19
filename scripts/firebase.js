@@ -27,6 +27,11 @@
 
 console.log(document.getElementById("btloguin"))
 
+
+const btloguin =  document.getElementById("btloguin") ;
+
+if(btloguin!== null) {
+
 document.getElementById("btloguin").addEventListener("click", ()=> {
 
            const email = document.getElementById("emailloguin").value 
@@ -66,5 +71,31 @@ document.getElementById("btloguin").addEventListener("click", ()=> {
         })
 
 
-
+      }
        
+
+        /*** BOTON PASSS LOGUININ */
+
+document.getElementById("btloguinIn").addEventListener("click", ()=> {
+
+  console.log("entra sigIn")
+
+  const email = document.getElementById("emailloginIn").value 
+  const password = document.getElementById("pswloguinIn").value 
+
+  signInWithEmailAndPassword(auth, email, password)
+
+  .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+          // ...
+      console.log("Logueado de User Ok ")
+  })
+  .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode+errorCode)
+  });
+
+
+})
