@@ -25,9 +25,11 @@ const createCar = () => {
 
 const showCar = () => {
     const car = JSON.parse(localStorage.getItem('carrito'));
+    if(Object.entries(car).length >= 1){
+        let template = ""
         let j = 1
         for(const i in car) {
-            document.getElementById('car').innerHTML  += `
+            template += `
             <div class="carShop" id="product_${j}">
                 <h3>${i}</h3>
                 <p>$ ${car[i].price}</p>
@@ -41,7 +43,7 @@ const showCar = () => {
             </div>`;
             j++
         }
-
+        document.getElementById('car').innerHTML = template
         for (const x of document.querySelectorAll('#car div')) {
             if(x.childNodes[9] != null){
                 x.childNodes[9].addEventListener('click', () => {
@@ -54,6 +56,10 @@ const showCar = () => {
                 })
             }
         }
+    }else {
+        document.getElementById('car').innerHTML = "<h2>Tu carrito esta vacio</h2>"
+        document.getElementById('comprar').setAttribute('style','display: none')
+    }
 }
 
 const updateCar = (product) => {
@@ -74,6 +80,7 @@ const updateCar = (product) => {
         delete car[productName]
     }
     localStorage.setItem('carrito', JSON.stringify(car));
+    showCar()
 }
 
 const deleteCar = (product) => {
@@ -83,6 +90,24 @@ const deleteCar = (product) => {
     const productName = document.querySelector(`#product_${id} h3`).innerHTML
     delete car[productName]
     localStorage.setItem('carrito', JSON.stringify(car));
+    showCar()
+}
+
+const shopNow = () => {
+    const car = JSON.parse(localStorage.getItem('carrito'));
+    const keys = Object.keys(car)
+    let total = 0
+    for (const x of keys) {
+        total += (car[x].price * car[x].count)
+    }
+    const template = `
+    <div>
+        <h2>Muchas Gracias por tu Compra :)</h2>
+        <p>El monto total de tu compra es ${total}</p>
+    </div>`
+    document.getElementById('car').innerHTML = template
+    document.getElementById('comprar').setAttribute('style','display: none')
+    localStorage.setItem('carrito', JSON.stringify({}))   
 }
 
 if(document.getElementById('car') != null) showCar()
@@ -92,6 +117,9 @@ if(document.getElementById('shop') != null) {
             addToCar(x.id)
         })
     }
+}
+if(document.getElementById('comprar') != null){
+    document.getElementById('comprar').addEventListener('click', () => shopNow())
 }
 
 createCar()
