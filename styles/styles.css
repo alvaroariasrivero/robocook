@@ -57,6 +57,7 @@ header nav div>ul>li>a {
     width: 100%;
     filter: brightness(50%);
     margin: 0px;
+    max-height: 365px;
 }
 
 .centrado {
