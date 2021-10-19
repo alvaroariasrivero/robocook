@@ -160,6 +160,54 @@ h5 {
     padding-top: 10px;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+.campo {
+    display: flex;
+    align-content: center;
+    padding: 5px;
+}
+
+.campo * {
+    padding: 0 5px;
+}
+
+.campo2 {
+    display: flex;
+    align-content: center;
+    padding: 5px;
+    justify-content: center;
+}
+
+.campo2 * {
+    padding: 0 5px;
+}
+
+.boton {
+    width: 10%;
+    margin-top: 10px;
+}
+
+
 footer {
     color: var(--color-2);
     background-color: #444;

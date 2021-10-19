@@ -27,48 +27,46 @@
 
 console.log(document.getElementById("btloguin"))
 
+if(document.getElementById("btloguin") != null){
 
-const btloguin =  document.getElementById("btloguin") ;
-
-if(btloguin!== null) {
-
-document.getElementById("btloguin").addEventListener("click", ()=> {
-
-           const email = document.getElementById("emailloguin").value 
-           const password = document.getElementById("pswloguin").value 
-
-            createUserWithEmailAndPassword(auth, email, password)
-
-              .then((userCredential) => {
-                // Signed in
-                const user = userCredential.user;
-                console.log("login")
-                console.log(user.uid)
-                console.log(user)
-                console.log(user.email)
-
-                /**Aqui capturo del objeto user el .uid y el .email y lo meto en la coleccion "user"* **/
-
-                setDoc (doc(db,"User",user.uid),{
-                    email: email,
-                    uid : user.uid,
-                    producto1: "",
-                    producto2: "",
-                    producto3:  ""
-                
-                    });
-
-
-              })
-              .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode+errorCode)
-                // ..
-              });
-
-
-        })
+  document.getElementById("btloguin").addEventListener("click", ()=> {
+  
+             const email = document.getElementById("emailloguin").value 
+             const password = document.getElementById("pswloguin").value 
+  
+              createUserWithEmailAndPassword(auth, email, password)
+  
+                .then((userCredential) => {
+                  // Signed in
+                  const user = userCredential.user;
+                  console.log("login")
+                  console.log(user.uid)
+                  console.log(user)
+                  console.log(user.email)
+  
+                  /**Aqui capturo del objeto user el .uid y el .email y lo meto en la coleccion "user"* **/
+  
+                  setDoc (doc(db,"User",user.uid),{
+                      email: email,
+                      uid : user.uid,
+                      producto1: "",
+                      producto2: "",
+                      producto3:  ""
+                  
+                      });
+  
+  
+                })
+                .catch((error) => {
+                  const errorCode = error.code;
+                  const errorMessage = error.message;
+                  console.log(errorCode+errorCode)
+                  // ..
+                });
+  
+  
+          })
+}
 
 
       }
