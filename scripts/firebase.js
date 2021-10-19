@@ -69,7 +69,7 @@ if(document.getElementById("btloguin") != null){
 }
 
 
-      }
+   
        
 
         /*** BOTON PASSS LOGUININ */
