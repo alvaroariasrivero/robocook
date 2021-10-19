@@ -36,19 +36,33 @@
             </nav>
         </div>
     </header>
-  <h1> Login de RoobCook </h1>
+    <div class="intro">
+        <img src="../assets/comunidad.jpg" alt="comunidad" class="img-intro">
+        <div class="centrado">
+            <h1>Login</h1>
+            <p class="intro">Accede a tu cuenta para disfrutar de todas las ventajas</p>
+        </div>
+    </div>
     <div class="dform">
-        <form onsubmit="Comprobar()">
+        <form onsubmit="Comprobar()" class="login">
 
-            <label for="email2">Email</label><br>
-            <input type="email2" id="emailloginIn" name="email2" required ><br><br>
-            <label for="psw">Contraseña</label><br>
-            <input type="password" id="pswloguinIn"  ><br><br>
-            <input type="button" id="btloguinIn"> ENVIAR <br><br>
+            <div class="campo2">
+            <label for="email2">Email:</label><br>
+            <input type="email2" id="emailloginIn" name="email2" required >
+            </div>
+            <div class="campo2">
+            <label for="psw">Contraseña:</label>
+            <input type="password" id="pswloguinIn">
+            </div>
+            <div class="campo2">
+            <input type="button" id="btloguinIn" value="ENVIAR" class="boton">
+            </div>
+            <div class="campo2">
+            <a href="../pages/formlogin.html"> Crear nueva cuenta</a>
+            </div>
         </form>
     </div>
     <div>
-        <a href="../pages/formlogin.html"> Crear nueva cuenta</a><br>
     </div><br>
     <footer>
         <a href="../index.html"><img src="../assets/logo.png" alt="logo"></a>

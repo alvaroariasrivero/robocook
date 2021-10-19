@@ -57,7 +57,7 @@ const showCar = () => {
             }
         }
     }else {
-        document.getElementById('car').innerHTML = "<h2 class='monto'>Tu carrito esta vacio</h2>"
+        document.getElementById('car').innerHTML = "<h2 class='monto'>Tu carrito esta vacío</h2>"
         document.getElementById('comprar').setAttribute('style','display: none')
     }
 }
